@@ -14,5 +14,5 @@ use App\Http\Controllers\LimoAnywhereController;
 |
 */
 
-Route::get('/ride-booking', [LimoAnywhereController::class, 'showForm']);
+Route::get('/ride-booking', [LimoAnywhereController::class, 'showForm'])->name('ride.booking');
 Route::post('/ride-booking', [LimoAnywhereController::class, 'getRates']);

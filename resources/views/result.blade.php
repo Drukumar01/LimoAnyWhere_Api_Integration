@@ -69,4 +69,11 @@
         @endif
 
         <div class="text-center mt-4">
-            <a href="/" class="btn btn-primar
+            <a href="{{ route('ride.booking') }}" class="btn btn-primary">Back to Search</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

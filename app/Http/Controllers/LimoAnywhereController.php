@@ -24,22 +24,22 @@ class LimoAnywhereController extends Controller
     }
 
     public function getRates(Request $request)
-{
-    $validated = $request->validate([
-        'pickup_location' => 'required|string',
-        'dropoff_location' => 'required|string',
-        'pickup_date' => 'required|date',
-        'pickup_time' => 'required',
-        'passenger_count' => 'required|integer|min:1',
-    ]);
+    {
+        $validated = $request->validate([
+            'pickup_location' => 'required|string',
+            'dropoff_location' => 'required|string',
+            'pickup_date' => 'required|date',
+            'pickup_time' => 'required',
+            'passenger_count' => 'required|integer|min:1',
+        ]);
 
-    try {
+        try {
 
-        $accessToken = $this->limoService->getAccessToken();
+            $accessToken = $this->limoService->getAccessToken();
 
-        if (!$accessToken) {
-            throw new \Exception("Failed to retrieve access token.");
-        }
+            if (!$accessToken) {
+                throw new \Exception("Failed to retrieve access token.");
+            }
 
 
         $requestData = [

@@ -44,10 +44,9 @@ class LimoAnywhereService
         }
 
         return $data['access_token'];
-    } catch (\Exception $e) {
-        Log::error('Access Token Error: ' . $e->getMessage());
-        return null;
+        } catch (\Exception $e) {
+            Log::error('Access Token Error: ' . $e->getMessage());
+            return null;
+        }
     }
-}
-
 }
